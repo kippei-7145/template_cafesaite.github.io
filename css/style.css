@@ -1,0 +1,648 @@
+@charset "utf-8";
+
+/* 共通部分 */
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "Yu Gothic Medium","游ゴシック  Medium",YuGothic,"游ゴシック体","ヒラギノ角 Pro W3",sans-serif;
+  line-height: 1.7;
+ color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+  /* スマホ対応の余白 */
+}
+.logo {
+  width: 140px;
+  margin: 14px;
+  vertical-align: bottom;
+}
+.page-header {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ max-width: none;
+}
+.main-nav {
+  display: flex;
+  font-size: 1.25rem;
+  margin-top: 34px;
+  list-style: none;
+}
+.main-nav li {
+  margin-left: 36px;
+}
+.main-nav a {
+  color: #fff;
+    font-family: 'Philosopher', serif;
+    line-height: 1.5em;
+   text-transform: uppercase;
+    font-weight: normal;
+}
+.main-nav a:hover {
+  color: #eb6f2d;
+}
+/* メイン */
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+}
+.home-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 42px;
+}
+.page-ttl {
+  font-size: 5rem;
+  font-family: 'Philosopher', serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.main-ttl {
+  font-size: 2rem;
+  font-family: 'Philosopher', serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+/* ボタン */
+.button {
+  font-size: 1.375rem;
+  background: #eb6f2d;
+  color: #fff;
+  border-radius: 5px;
+  padding: 18px 32px;
+  font-family: 'Philosopher', serif;
+  line-height: 1.5em;
+  font-weight: normal;
+}
+.button:hover {
+  background: #de6828;
+}
+/* 大きな背景画像 */
+.big-bg {
+background-size: cover;
+background-position: center top;
+background-repeat: no-repeat;
+}
+/* id */
+#home {
+  background-image: url(../cmn/images/coffe.jpeg)  ;
+  min-height: 100vh;
+  margin-bottom: 100px;
+}
+#home .page-ttl {
+  color: #fff;
+  /* padding: 60px 0 0; */
+  text-transform: none;
+}
+/* menuとindexのh2ttl装飾 */
+
+.main-ttl {
+  color: #fff;
+}
+/* news */
+#news {
+  background: url(../cmn/images/news.jpeg);
+  background-size: cover;
+  min-height: 100vh;
+  vertical-align: bottom;
+  margin-bottom: 50px;
+
+}
+#news .page-ttl {
+  color: #fff;
+  padding: 60px 0 0;
+  text-align: center;
+}
+/* フッター */
+footer {
+  /* background: #432; */
+  text-align: center;
+  padding: 26px 0;
+  margin-top: 100px;
+}
+/* フッター3分割レイアウト */
+/* アイコン挿入 */
+.footer_icon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -10px 10px;
+ }
+.footer_icon > li {
+  padding: 0 10px;
+}
+.footer_icon a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: #fff;border-radius: 50%;
+  position: relative;
+}
+.footer_icon a::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer_icon .twitter a::before {
+background: url(../cmn/icno/twittericon.svg);
+}
+.footer_icon .instagram a::before {
+background: url(../cmn/icno/instagramicon.svg);
+}
+.footer_icon .facebook a::before {
+background: url(../cmn/icno/facebookicon.svg);
+}
+/* コピーライト */
+.copyright{
+  color: #000;
+  font-size: 1rem;
+  font-family: 'Philosopher', serif;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+/* 記事部分 */
+article {
+  width: 60%;
+}
+/* サイドバー */
+aside {
+  width: 22%;
+}
+/* aside/articleの配置 */
+.news-contens {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+/* 記事のタイトル */
+.post-info {
+  position: relative;
+  padding-top: 4px;
+  margin-bottom: 40px;
+}
+.post-date {
+  background: #eb6f2d;
+  border-radius: 50%;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  font-size: 1.625rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  padding-top: 10px;
+}
+.post-date span {
+  font-size:1rem;
+  border-top: 1px rgba(255, 255, 255, 5) solid;
+  padding-top: 6px;
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+.post-ttl {
+  font-family: "Yu Mincho", "YuMincho", serif;
+  font-size: 2rem;
+  font-weight: normal;
+}
+.post-ttl,
+.post-cat {
+  margin-left: 120px;
+}
+article img {
+  vertical-align: bottom;
+  margin-bottom: 30px;
+}
+article p {
+  margin-bottom: 1rem;
+}
+
+/* サイドバー */
+.sub-ttl {
+  font-size: 1.375rem;
+  padding: 0 8px 8px;
+  border-bottom: 2px #eb6f2d solid;
+  font-weight: normal;
+}
+aside p {
+  padding: 12px 10px;
+}
+.sub-menu {
+  margin-bottom: 60px;
+}
+.sub-menu li {
+  border-bottom: 1px #ddd solid;
+}
+.sub-menu a {
+  color: #432;
+  padding: 10px;
+  display: block;
+}
+.sub-menu a:hover {
+  color: #de6828;
+}
+
+
+/* バナー追加による位置変更 */
+article {
+  width: 60%;
+  order: 2;
+}
+aside {
+  width: 22%;
+  order: 3;
+}
+.ad {
+  width: 10%;
+  order: 1;
+}
+
+/* MENU */
+#menu {
+  background: url(../cmn/images/menu1.png);
+  min-height: 100vh;
+  background-size: cover;
+  vertical-align: bottom;
+  margin-bottom: 50px;
+}
+.menu-content .page-ttl {
+  color: #fff;
+  text-align: center;
+  padding: 60px 0 0;
+}
+.menu-contrent {
+  max-width: 560px;
+  margin-top: 10%;
+}
+.menu-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 0 ;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 6px;
+  margin-bottom: 50px;
+}
+.big-box {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+.big-box img {
+  height: 93%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* contact */
+#contact {
+  background: url(../cmn/images/contact.jpg);
+  min-height: 100vh;
+  background-size: cover;
+}
+
+/* フォーム */
+#contact .page-ttl {
+  color: #fff;
+  padding: 60px 0 0;
+  text-align: center;
+}
+/* セクション */
+#location {
+  padding: 4% 0;
+}
+#location > .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.location-info {
+  width: 22%;
+}
+.location-info p {
+  padding: 12px 10px;
+}
+.location-map {
+  width: 74%;
+}
+.iframe {
+  width: 100%;
+}
+
+/* メニュー表２分割レイアウト */
+/* メニュー紹介のレイアウト */
+.layout-2-div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* margin: 50px 120px; */
+}
+.layout-2-div > div {
+  width: 50%;
+  padding: 0 20px;
+}
+/* ２分割レイアウトパターン３ */
+.layout-3-div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.layout-3-div > div {
+  width: 50%;
+  padding: 0 20px;
+}
+.text-home .menu-ttl{
+  font-size: 2.5rem;
+  font-family: 'Philosopher', serif;
+  line-height: 1.5em;
+  font-weight: normal;
+}
+.text-home .menu-sub-ttl {
+  font-size: 2rem;
+  font-family: 'Philosopher', serif;
+  line-height: 1.5em;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+.text-home .menu-sub-ttl span {
+  font-size: 1.5rem;
+  margin-left: 5px;
+}
+.text-home .menu-discription{
+  font: 300 20px/1.8em 'futura PT','note sans japanese',sans-serif;
+}
+/* メニュー名の装飾 */
+.item a {
+  color: #432;
+}
+.big-box a {
+  color: #432;
+}
+.item a:hover {
+  color: #de6828;
+}
+.big-box a:hover {
+  color: #de6828;
+}
+/* HOMEのセクションタグ */
+/* タイトルの下線 */
+.area-home-ttl {
+    font-size: 3rem;
+    font-family: 'Philosopher', serif;
+    line-height: 1.5em;
+    margin: 0 0 60px;
+    text-align: center;
+    position: relative;
+    font-weight: normal;
+  }
+  .area-home-ttl::before {
+      content: "";
+      border-bottom: 2px solid #000;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 12%;
+      margin: 0 auto -5px;
+  }
+/* K.coofeeとは */
+.text-home .ttl {
+  font-size: 2.5rem;
+  font-family: 'Philosopher', serif;
+  line-height: 1.5em;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+/* HOMEの２分割レイアウト */
+.layout-home-div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.layout-home-div > div {
+  width: 50%;
+  padding: 0 20px;
+}
+/* セクションのメニュー特徴 */
+
+.menu-feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-feature > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 40px;
+}
+.menu-feature .ttl {
+  font-size: 2rem;
+  font-family: 'Philosopher', serif;
+  line-height: 1.5em;
+  text-align: left;
+  font-weight: normal;
+  padding: 10px 0 
+}
+.menu-text-home {
+  display: block;
+  flex-direction: column;
+  text-align: center;
+}
+.menu-text-home .ttl {
+  font-size: 2.5rem;
+  font-family: 'Philosopher', serif;
+  line-height: 1.5em;
+  text-align: center;
+  font-weight: normal;
+  margin: 20px 0 10px;
+}
+.btn-home {
+  text-align: center;
+  margin-top: 5%;
+}
+/* 新メニューページ */
+#new-menu {
+  background: url(../cmn/images/newmenu.jpeg);
+  min-height: 100vh;
+  background-size: cover;
+  vertical-align: bottom;
+  margin-bottom: 50px;
+}
+#new-menu .page-ttl {
+  color: #eb6f2d;
+  padding: 60px 0 0;
+  text-align: center;
+}
+/* セクションを区切るボーダー */
+hr {
+border: 1px solid #ccc;
+margin: 100px 0;
+}
+
+/* レスポンシズデザイン（スマホ対応CSS） */
+@media (max-width: 600px) {
+ .page-ttl {
+    font-size: 2.5rem;
+  }
+  /* HEADER */
+  .main-nav {
+    font-size: 1rem;
+    margin-top: 10px 0 0;
+  }
+  .main-nav li {
+    margin: 0 20px; 
+  }
+  /* HOME */
+  .home-content,
+  .menu-content {
+    margin-top: 10%;
+  }
+  .page-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-ttl {
+    font-size: 1rem;
+  }
+  .area-home-ttl {
+    font-size: 3rem;
+  }
+  /* news */
+  .news-contens {
+    flex-direction: column;
+  }
+  article,
+  aside {
+    width: 100%;
+  }
+  /* 文字サイズ余白調整 */
+  #news .page-ttl {
+    margin-top: 30px;
+  }
+  aside {
+    margin-top: 60px;
+  }
+  .post-info {
+    margin-bottom: 30px;
+  }
+  .post-date {
+    width: 70px;
+    height: 70px;
+    font-size: 1rem;
+  }
+  .post-date span {
+    font-size: 0,875rem;
+    padding-top: 2px;
+  }
+  .post-ttl {
+    font-size: 1.375rem;
+  }
+  .post-cat {
+    font-size: 00.875rem;
+    margin-top: 10px;
+  }
+  .post-ttl,
+  .post-cat {
+    margin-left: 80px;
+  }
+  /* menu */
+  .menu-content {
+    margin-top: 20%;
+  }
+  .big-box {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .big-box {
+    height: 100%;
+  }
+  /* contact */
+ .location_layout {
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+ }
+ .location-map {
+  display: block;
+ }
+ .location-info,
+ .location-map  {
+   width: 100%;
+ }
+  /* ２分割レイアウト文字 */
+  .layout-home-div,
+  .layout-2-div, 
+  .layout-3-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .layout-home-div > div,
+  .layout-2-div > div,
+  .layout-3-div > div {
+    width: 100%;
+  }
+  /* ２分割レイアウト画像 */
+  .layout-home-div > .img {
+    display: block;
+  }
+  .layout-home-div > .img  {
+    width: 100%;
+  }
+.layout-2-div > .item {
+  display: block;
+  width: 100%;
+}
+/* 2分割レイアウト文字*/
+.text-home .ttl,
+.text-home .menu-ttl {
+  font-size: 2rem;
+  text-align: center;
+}
+.text-home .menu-sub-ttl{
+  font-size: 1.5rem;
+  text-align: center;
+}
+.menu-text-home .ttl {
+  font-size: 1.5rem;
+}
+
+/* 個別メニュー文字 */
+.text-home .menu-ttl {
+  font-size: 2rem;
+  width: auto;
+}
+ .description {
+  font-size: 0.7rem;
+  }
+  /* ボタン */
+  .btn-home a {
+    display: block;
+  }
+  .button {
+    margin-top: 10%;
+  }
+}
+/* レスポンシブend */
+
