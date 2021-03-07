@@ -142,16 +142,16 @@ footer {
 }
 .footer_icon a {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background: #fff;border-radius: 50%;
   position: relative;
 }
 .footer_icon a::before {
   content: "";
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -172,7 +172,7 @@ background: url(../cmn/icno/facebookicon.svg);
 /* コピーライト */
 .copyright{
   color: #000;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-family: 'Philosopher', serif;
   font-weight: normal;
   margin-bottom: 30px;
@@ -332,7 +332,7 @@ aside {
 #location {
   padding: 4% 0;
 }
-#location > .wrapper {
+#location .wrapper {
   display: flex;
   justify-content: space-between;
 }
@@ -344,9 +344,6 @@ aside {
 }
 .location-map {
   width: 74%;
-}
-.iframe {
-  width: 100%;
 }
 
 /* メニュー表２分割レイアウト */
@@ -470,12 +467,16 @@ aside {
   text-align: center;
 }
 .menu-text-home .ttl {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: 'Philosopher', serif;
   line-height: 1.5em;
   text-align: center;
   font-weight: normal;
   margin: 20px 0 10px;
+}
+.ttl,
+.description {
+  padding: 0 20px;
 }
 .btn-home {
   text-align: center;
@@ -504,6 +505,14 @@ margin: 100px 0;
 @media (max-width: 600px) {
  .page-ttl {
     font-size: 2.5rem;
+  }
+  /* トップ画像 */
+  #news,
+  #home,
+  #contact,
+  #menu,
+  #new-menu {
+    min-height: 75vh;
   }
   /* HEADER */
   .main-nav {
@@ -566,6 +575,21 @@ margin: 100px 0;
   .post-cat {
     margin-left: 80px;
   }
+  .ad {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .ad img {
+    width: 00%;
+    justify-content: center;
+  }
+  .ad {
+    background: url(../cmn/images/banneryoko.png) no-repeat center center;
+    background-size: cover;
+    min-height: 15vh;
+    width: 100%;
+    margin-bottom: 10%;
+  }
   /* menu */
   .menu-content {
     margin-top: 20%;
@@ -578,19 +602,18 @@ margin: 100px 0;
     height: 100%;
   }
   /* contact */
- .location_layout {
-   flex-direction: column;
-   align-items: center;
-   text-align: center;
- }
- .location-map {
-  display: block;
- }
- .location-info,
- .location-map  {
-   width: 100%;
- }
-  /* ２分割レイアウト文字 */
+  #location .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .location-info,
+  .location-map {
+    width: 100%;
+  }
+  .iframe {
+    width: auto;
+  }
+  /* 文字 */ 
   .layout-home-div,
   .layout-2-div, 
   .layout-3-div{
@@ -614,11 +637,18 @@ margin: 100px 0;
   display: block;
   width: 100%;
 }
+/* 新メニューマージン */
+.layout-2-div {
+  margin-bottom: 50px;
+}
 /* 2分割レイアウト文字*/
 .text-home .ttl,
 .text-home .menu-ttl {
   font-size: 2rem;
   text-align: center;
+}
+.menu-text-home {
+  margin-bottom: 15%;
 }
 .text-home .menu-sub-ttl{
   font-size: 1.5rem;
@@ -636,13 +666,7 @@ margin: 100px 0;
  .description {
   font-size: 0.7rem;
   }
-  /* ボタン */
-  .btn-home a {
-    display: block;
-  }
-  .button {
-    margin-top: 10%;
-  }
+
 }
 /* レスポンシブend */
 
